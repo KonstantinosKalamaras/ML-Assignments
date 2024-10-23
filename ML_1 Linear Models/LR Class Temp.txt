@@ -1,0 +1,7 @@
+def calculate_cost(self, X, y):
+        # Calculate cost value
+        m = X.shape[0]
+        predictions = sigmoid(X.dot(self.theta))
+        cost = -(1/m) * (y.T.dot(np.log(predictions)) + (1 - y).T.dot(np.log(1 - predictions)))
+        return cost
+        
